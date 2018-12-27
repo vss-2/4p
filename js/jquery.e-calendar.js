@@ -1,6 +1,6 @@
 /**
  * @license e-Calendar v0.9.3
- * (c) 2014-2016 - Jhonis de Souza
+ * (c) 2014-2019 - Jhonis de Souza
  * License: GNU
  */
 
@@ -198,20 +198,25 @@
         eventTitle: 'Eventos',
         url: '',
         events: [
-            {title: 'InfraCom', description: 'MP1, Prova1: 26/09, Assuntos: Módulo 1 e 2', datetime: new Date(2018, 08, 19)},
-            {title: 'InfraHard', description: 'Prova1, Assuntos: Projeto', datetime: new Date(2018, 09, 05)},
-            {title: 'InfraHard', description: '19/09 e 26/09 LabHard (Projeto)', datetime: new Date(2018, 09, 19)},
-            {title: 'InfraHard', description: 'Prova 3, SegCham 07/12', datetime: new Date(2018, 11, 05)},
-            {title: 'InfraHard', description: 'Lista InfraHard Entrega', datetime: new Date(2018, 08, 12)},
-            {title: 'InfraHard', description: 'Prova Final', datetime: new Date(2018, 11, 12)},
-            {title: 'InfraSoft', description: '1.o EE', datetime: new Date(2018, 11, 02)},
-            {title: 'InfraSoft', description: 'Grad 2 - Exercício Concorrência (3.o EE)', datetime: new Date(2018, 09, 16)},
-            {title: 'InfraSoft', description: '2.o EE', datetime: new Date(2018, 11, 04)},
-            {title: 'InfraSoft', description: 'Revisão de notas', datetime: new Date(2018, 11, 11)},
-            {title: 'InfraSoft', description: 'Prova final', datetime: new Date(2018, 11, 13)},
-            {title: 'InfraSoft', description: 'ATIV EXTRA: Escalonamento de Proc.', datetime: new Date(2018, 08, 27)},
-            {title: 'InfraSoft', description: 'ATIV EXTRA: Arquiv/Subst de Pág.', datetime: new Date(2018, 09, 30)},
-            {title: 'InfraSoft', description: 'ATIV EXTRA: RMI e Serviços de Nomes', datetime: new Date(2018, 10, 29)},
+            // Os eventos são adicionados no seguinte formato:
+            // title: Título do evento
+            // description: Descrição do evento
+            // datetime: new Date(ano (AAAA), mes(MM-1), dia (DD)), NOTE: Se o evento é mês 9, coloque 8 dentro do Date()
+            // Exemplos: 
+            //{title: 'InfraCom', description: 'MP1, Prova1: 26/09, Assuntos: Módulo 1 e 2', datetime: new Date(2018, 08, 19)},
+            //{title: 'InfraHard', description: 'Prova1, Assuntos: Projeto', datetime: new Date(2018, 09, 05)},
+            //{title: 'InfraHard', description: '19/09 e 26/09 LabHard (Projeto)', datetime: new Date(2018, 09, 19)},
+            //{title: 'InfraHard', description: 'Prova 3, SegCham 07/12', datetime: new Date(2018, 11, 05)},
+            //{title: 'InfraHard', description: 'Lista InfraHard Entrega', datetime: new Date(2018, 08, 12)},
+            //{title: 'InfraHard', description: 'Prova Final', datetime: new Date(2018, 11, 12)},
+            //{title: 'InfraSoft', description: '1.o EE', datetime: new Date(2018, 11, 02)},
+            //{title: 'InfraSoft', description: 'Grad 2 - Exercício Concorrência (3.o EE)', datetime: new Date(2018, 09, 16)},
+            //{title: 'InfraSoft', description: '2.o EE', datetime: new Date(2018, 11, 04)},
+            //{title: 'InfraSoft', description: 'Revisão de notas', datetime: new Date(2018, 11, 11)},
+            //{title: 'InfraSoft', description: 'Prova final', datetime: new Date(2018, 11, 13)},
+            //{title: 'InfraSoft', description: 'ATIV EXTRA: Escalonamento de Proc.', datetime: new Date(2018, 08, 27)},
+            //{title: 'InfraSoft', description: 'ATIV EXTRA: Arquiv/Subst de Pág.', datetime: new Date(2018, 09, 30)},
+            //{title: 'InfraSoft', description: 'ATIV EXTRA: RMI e Serviços de Nomes', datetime: new Date(2018, 10, 29)},
         ],
         firstDayOfWeek: 0
     };
