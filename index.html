@@ -5,7 +5,7 @@
                 <title> Quarto Período </title>
                 
                 <!-- Local do arquivo CSS -->
-                <link rel="stylesheet" href="css/stylesNavBar.css"/>
+                <link rel="stylesheet" href="css/styles.css"/>
         
                 <!-- Local das fontes personalizadas -->
                 <link ref="stylesheet" href="css/font-awesome.css"/>
@@ -18,7 +18,7 @@
                      isso faria disparar uma opção de gerar
                      um aplicativo (WebApp) do site
                     
-                     1a linha: o json que deifne tamanho do icone
+                     1a linha: o json que ativa isso
                      2a linha: o meta que ativa isso
                      3a linha: o icone do app tamanho 192x192
                     -->
@@ -193,6 +193,23 @@
                     <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/408273/t/0"></script>
                 </div>
         
+                <div class="dark-div" id="dark-div-2" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);" onclick="darker()">
+                    <p>Modo Escuro</p>
+                </div>
+
+                <script>
+                    document.getElementById("dark-div-2").style.backgroundColor = sessionStorage.getItem("bg");
+                    document.getElementById("dark-div-2").style.color = sessionStorage.getItem("cc");
+                    function darker() {
+                        "rgb(255, 255, 255)" === sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
+                        sessionStorage.setItem("cc", "#eee")) : null == sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
+                        sessionStorage.setItem("cc", "#eee")) : "rgb(6, 23, 37)" === sessionStorage.getItem("bg") && (sessionStorage.setItem("bg", "rgb(255, 255, 255)"),
+                        sessionStorage.setItem("cc", "#333"));
+                        document.getElementById("dark-div-2").style.backgroundColor = sessionStorage.getItem("bg");
+                        document.getElementById("dark-div-2").style.color = sessionStorage.getItem("cc")
+                    };
+                </script>
+
                 <footer>
                     <!-- Rodapé da página-->
         
