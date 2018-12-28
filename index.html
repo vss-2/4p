@@ -29,7 +29,7 @@
         
             </head>
         
-            <body>
+            <body style="background-color: rgb(255, 255, 255)">
                 <!-- Estilo básico para o corpo,
                      apenas defino a fonte Quicksand-->
         
@@ -198,15 +198,29 @@
                 </div>
 
                 <script>
-                    document.getElementById("dark-div-2").style.backgroundColor = sessionStorage.getItem("bg");
-                    document.getElementById("dark-div-2").style.color = sessionStorage.getItem("cc");
+                    document.body.style.backgroundColor = sessionStorage.getItem('bg');
+                    document.body.style.color = sessionStorage.getItem('cc');
                     function darker() {
-                        "rgb(255, 255, 255)" === sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
-                        sessionStorage.setItem("cc", "#eee")) : null == sessionStorage.getItem("bg") ? (sessionStorage.setItem("bg", "rgb(6, 23, 37)"),
-                        sessionStorage.setItem("cc", "#eee")) : "rgb(6, 23, 37)" === sessionStorage.getItem("bg") && (sessionStorage.setItem("bg", "rgb(255, 255, 255)"),
-                        sessionStorage.setItem("cc", "#333"));
-                        document.getElementById("dark-div-2").style.backgroundColor = sessionStorage.getItem("bg");
-                        document.getElementById("dark-div-2").style.color = sessionStorage.getItem("cc")
+                        if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+                            
+                                sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+                                sessionStorage.setItem('cc', '#777');
+                                
+                        }
+                        else if (sessionStorage.getItem('bg') == null || undefined) {
+                            sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+                            sessionStorage.setItem('cc', '#777');
+                            
+                        }
+                        else if( sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
+                            
+                            sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+                            sessionStorage.setItem('cc', '#333');
+                            
+                        }
+
+                        document.body.style.backgroundColor = sessionStorage.getItem('bg');
+                        document.body.style.color = sessionStorage.getItem('cc');
                     };
                 </script>
 
